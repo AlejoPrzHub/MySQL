@@ -139,3 +139,70 @@ connection.connect(function(error)
 //         console.log(result);
 //     }
 // })
+
+
+
+
+
+
+
+
+//////////////////////////DIA 2/////////////////////////////////////
+
+                                                ///RETO 1.1
+// let sql = "SELECT AVG(nota) FROM notas";
+// connection.query(sql,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("AVG CORRECTO");
+//         console.log(result);
+//     }
+// })
+
+                                                //RETO1.2
+// let sql = "SELECT COUNT(*) AS total_alumnos FROM estudiantes";
+// connection.query(sql,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("TOTAL DE ALUMNOS");
+//         console.log(result);
+//     }
+// })
+                                            //RETO1.3
+// let sql = "SELECT * FROM grupos";
+// connection.query(sql,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })
+                                                //RETO1.4
+// let sql = "DELETE nota FROM notas WHERE nota > 5 AND fecha > 2021/01/01";
+// connection.query(sql,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })
+
+                                                //RETO 1.5 
+// let sql = "SELECT * FROM estudiantes WHERE anyo_ingreso =2022";
+// connection.query(sql,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })
