@@ -206,3 +206,53 @@ connection.connect(function(error)
 //         console.log(result);
 //     }
 // })
+                                            //RETO 1.6
+// let sql = "SELECT id_asignaturas, COUNT(*) AS prof_xasig FROM profesor_asignatura GROUP BY id_asignaturas";
+// connection.query(sql,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })
+
+                                                //RETO2
+
+// let sql = "SELECT id_estudiantes, nota FROM notas WHERE id_estudiantes BETWEEN 1 AND 20 OR nota > 8 AND fecha BETWEEN \"2021-01-01\" AND \"2021-31-12\"";
+// connection.query(sql,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })
+
+                                        //RETO 2.1
+
+
+// let sql = "SELECT AVG(nota), COUNT(id_asignatura) AS id_asig FROM notas WHERE fecha BETWEEN \"2022-01-01\" AND \"2022-12-12\" GROUP BY id_asignatura";
+// connection.query(sql,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })
+                                            //RETO 2.2
+
+// let sql = "SELECT AVG(nota), COUNT(*) AS alumnosxasig FROM notas WHERE fecha BETWEEN \"2022-01-01\" AND \"2022-12-12\" GROUP BY id_estudiantes";
+// connection.query(sql,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })
