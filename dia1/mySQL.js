@@ -256,3 +256,43 @@ connection.connect(function(error)
 //         console.log(result);
 //     }
 // })
+
+                                        //DIA 3 reto 1
+// let params = [];
+// let sql = "SELECT nombre,apellido,titulo FROM estudiantes JOIN asignaturas ON (estudiantes.id_asignatura = asignaturas.id)";
+// connection.query(sql,params,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })
+
+                                            //RETO 2
+//let params = [];
+// let sql = "SELECT profesores.nombre,profesores.apellido,asignaturas.titulo FROM profesores JOIN profesor_asignatura ON (profesores.id = profesor_asignatura.id_profesores) JOIN asignaturas ON (profesor_asignatura.id_asignaturas = asignaturas.id) GROUP BY titulo";
+// connection.query(sql,params,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })/ 
+
+                                            //RETO 3
+//let params = [];
+// let sql = "SELECT profesores.nombre,profesores.apellido,asignaturas.titulo, COUNT(estudiantes.id)FROM profesores JOIN profesor_asignatura ON (profesores.id = profesor_asignatura.id_profesores) JOIN asignaturas ON (profesor_asignatura.id_asignaturas = asignaturas.id) JOIN grupos ON (profesor_asignatura.id_grupo = grupos.id) JOIN estudiantes ON (grupos.id = estudiantes.id_grupo) GROUP BY titulo";
+// connection.query(sql,params,function(error,result)
+// {
+//     if(error) console.log(error)
+//     else
+//     {
+//         console.log("SELECCION CORRECTA");
+//         console.log(result);
+//     }
+// })
+
