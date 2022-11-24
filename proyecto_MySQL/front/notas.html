@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notas.css">
+    <script src="notas.js"></script>
+    <title>API</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cuerpo">
+            <div class="header">
+                <h1>Nota API</h1>
+                <a href="estudiantes.html">Estudiantes API</a>
+                <a href="adicionales.html">Adicionales API</a>
+            </div>
+            <div class="centro">
+                <div class="preformulario">
+                    <div class="formulario">
+                        <h3>Notas</h3>
+                        <input class="componente" id="id_estudiantes" type="text" placeholder="ID Estudiante">
+                        <input class="componente" id="id_asignatura" type="text" placeholder="ID Asignatura">
+                        <input class="componente" id="fecha" type="text" placeholder="Fecha de la nota">
+                        <input class="componente" id="nota" type="text" placeholder="Nota">
+                        <input class="componente" id="idFront" type="text" placeholder="Id"> -->
+                        
+                        <div class="botones">
+                            <input class="boton" type="submit" value="Crear" onclick = "postNotas()">
+                            <input class="boton" type="button" value="Mostrar" onclick="getNotas()">
+                            <input class="boton" type="button" value="Actualizar" onclick="putNotas()">
+                            <input class="boton" type="button" value="Eliminar" onclick="delNotas()">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="prof"class="prof">
+                    <!-- <div class="card">
+                        <p>Nombre: </p>
+                        <p>Apellido: </p>
+                        <p>Grupo: </p>
+                        <p>Año de ingreso: </p>  -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

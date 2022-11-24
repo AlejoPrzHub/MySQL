@@ -29,11 +29,12 @@ async function postEstudiantes()
                                         document.getElementById("apellido").value,
                                         document.getElementById("id_grupo").value,
                                         document.getElementById("anyo_ingreso").value)
+        console.log(estudiante);
         //let estudiante = {"nombre":nombre,"apellido":apellido,"id_grupo":id_grupo,"anyo_ingreso":anyo_ingreso}
         let url = "http://localhost:3000/Estudiantes";
         let params =
         {
-            headers:{"Content-type":"applicatio/json;charset=UTF-8"},
+            headers:{"Content-type":"application/json;charset=UTF-8"},
             body:JSON.stringify(estudiante),
             method:"POST"
         }
@@ -51,16 +52,14 @@ async function getEstudiantes()
         try
         {
             let idFront = document.getElementById("idFront").value
-            let query = `id=${idFront}`
-            let buscarId = new URLSearchParams(query)
-
+            
 
             let url;
             if(idFront =="")
             {
                 url = `http://localhost:3000/Estudiantes`
             }
-            else(url = `http://localhost:3000/Estudiantes/?${buscarId.set("id",`${idFront}`)}`)
+            else(url = `http://localhost:3000/Estudiantes/?id=${idFront}`)
             let param =
             {
                 headers:{"Content-type":"application/json;charset=UTF-8"},
@@ -70,21 +69,12 @@ async function getEstudiantes()
             
             let data = await fetch(url,param);
             let result = await data.json()
+            console.log(result);
             let tarjeta = document.getElementById("prof")
             let div = document.createElement("div")
             
-            if(idFront !="")
-            {   div.innerHTML =( 
-                `<div class="card">
-                <p>Nombre: ${result[idFront].nombre}</p>
-                <p>Apellido: ${result[idFront].apellido} </p>
-                <p>Grupo: ${result[idFront].id_grupo} </p>
-                <p>Año de ingreso: ${result[idFront].anyo_ingreso} </p>`)
-                tarjeta.appendChild(div)
-            }
-
-            else
-                {
+            if(result.length > 1)
+            {
                 tarjeta.innerHTML = "" 
                 for(let i=0;i<result.length;i++)
                 {div.innerHTML +=
@@ -94,6 +84,18 @@ async function getEstudiantes()
                 <p>Grupo: ${result[i].id_grupo} </p>
                 <p>Año de ingreso: ${result[i].anyo_ingreso} </p>`)
                 tarjeta.appendChild(div)}}
+            
+
+            else
+            {   div.innerHTML =( 
+                `<div class="card">
+                <p>Nombre: ${result[0].nombre}</p>
+                <p>Apellido: ${result[0].apellido} </p>
+                <p>Grupo: ${result[0].id_grupo} </p>
+                <p>Año de ingreso: ${result[0].anyo_ingreso} </p>`)
+                tarjeta.appendChild(div)
+            }
+                
 
         }
         catch(error){console.log(error)}

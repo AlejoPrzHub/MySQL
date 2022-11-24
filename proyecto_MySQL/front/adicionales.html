@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estudiantes.css">
-    <script src="estudiantes.js"></script>
+    <link rel="stylesheet" href="adicionales.css">
+    <script src="adicionales.js"></script>
     <title>API</title>
 </head>
 <body>
     <div class="container">
         <div class="cuerpo">
             <div class="header">
-                <h1>Estudiantes API</h1>
+                <h1>Adicionales API</h1>
+                <a href="estudiantes.html">Estudiantes API</a>
                 <a href="notas.html">Notas API</a>
-                <a href="adicionales.html">Adicionales API</a>
             </div>
             <div class="centro">
                 <div class="preformulario">
                     <div class="formulario">
-                        <h3>Estudiantes</h3>
-                        <input class="componente" id="nombre" type="text" placeholder="Nombre">
-                        <input class="componente" id="apellido" type="text" placeholder="Apellido">
-                        <input class="componente" id="id_grupo" type="text" placeholder="Grupo">
-                        <input class="componente" id="anyo_ingreso" type="text" placeholder="Año de Ingreso">
+                        <!-- <h3>Notas</h3>
+                        <input class="componente" id="id_estudiantes" type="text" placeholder="ID Estudiante">
+                        <input class="componente" id="id_asignatura" type="text" placeholder="ID Asignatura">
+                        <input class="componente" id="fecha" type="text" placeholder="Fecha de la nota">
+                        <input class="componente" id="nota" type="text" placeholder="Nota"> -->
                         <input class="componente" id="idFront" type="text" placeholder="Id">
                         
                         <div class="botones">
-                            <input class="boton" type="submit" value="Crear" onclick = "postEstudiantes()">
-                            <input class="boton" type="button" value="Mostrar" onclick="getEstudiantes()">
-                            <input class="boton" type="button" value="Actualizar" onclick="putEstudiantes()">
-                            <input class="boton" type="button" value="Eliminar" onclick="delEstudiantes()">
+                            <input class="boton" type="submit" value="Nota Media" onclick = "getMedia()">
+                            <input class="boton" type="button" value="Apuntadas" onclick="getApuntadas()">
+                            <input class="boton" type="button" value="Impartidas" onclick="getImpartidas()">
+                            
                         </div>
                         
                     </div>
