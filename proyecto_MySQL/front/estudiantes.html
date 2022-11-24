@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estudiantes.css">
+    <script src="estudiantes.js"></script>
+    <title>API</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cuerpo">
+            <div class="header">
+                <h1>Estudiantes API</h1>
+            </div>
+            <div class="centro">
+                <div class="preformulario">
+                    <div class="formulario">
+                        <h3>Estudiantes</h3>
+                        <input class="componente" id="nombre" type="text" placeholder="Nombre">
+                        <input class="componente" id="apellido" type="text" placeholder="Apellido">
+                        <input class="componente" id="id_grupo" type="text" placeholder="Grupo">
+                        <input class="componente" id="anyo_ingreso" type="text" placeholder="Año de Ingreso">
+                        <input class="componente" id="idFront" type="text" placeholder="Id">
+                        
+                        <div class="botones">
+                            <input class="boton" type="submit" value="Crear" onclick = "postEstudiantes()">
+                            <input class="boton" type="button" value="Mostrar" onclick="getEstudiantes()">
+                            <input class="boton" type="button" value="Actualizar" onclick="putEstudiantes()">
+                            <input class="boton" type="button" value="Eliminar" onclick="delEstudiantes()">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="prof"class="prof">
+                    <!-- <div class="card">
+                        <p>Nombre: </p>
+                        <p>Apellido: </p>
+                        <p>Grupo: </p>
+                        <p>Año de ingreso: </p>  -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
